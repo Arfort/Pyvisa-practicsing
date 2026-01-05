@@ -29,6 +29,7 @@ class MockOscilloscope:
 
 scope = MockOscilloscope("USB0::0x1234::FAKE::INSTR")
 
+# reset the device
 scope.write('*RST')
 
 datalist = []
@@ -59,4 +60,5 @@ print("\nTest End!")
 # 读取数据并绘图
 data = pd.read_csv("test_result.csv")
 print(data)
+
 plt.figure(figsize=(10,5))
